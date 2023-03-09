@@ -35,7 +35,7 @@ class BookController extends Controller
     public function edit($id)
     {
         $books = Book::findOrFail($id);
-        return view('books.edit', compact('books'));
+        return view('update', compact('books'));
     }
 
     public function update(Request $request, $id)

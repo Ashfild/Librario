@@ -20,6 +20,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [BookController::class, 'index'])->name('books.index');
 Route::get('/book/create', [BookController::class, 'create'])->name('books.create');
 Route::post('/book', [BookController::class, 'store'])->name('books.store');
+Route::put('/book/{id}', [BookController::class, 'edit'])->name('books.edit');
 Route::put('/book/{id}', [BookController::class, 'update'])->name('books.update');
 Route::delete('/book/{id}', [BookController::class, 'destroy'])->name('books.destroy');
 Route::get('/book/search', [BookController::class, 'search'])->name('books.search');
